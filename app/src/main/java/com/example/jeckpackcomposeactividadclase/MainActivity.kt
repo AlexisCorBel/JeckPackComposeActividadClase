@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                    composable("detail/${id}"){ backStackEntry ->
+                    composable("detail/{id}"){ backStackEntry ->
                         val id = backStackEntry.arguments?.getString("id")?.toIntOrNull()
                         val task = tasks.find { it.id  == id }
                         task?.let {
